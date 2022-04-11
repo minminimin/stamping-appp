@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>出退勤管理</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <h1 class="title">出退勤管理</h1>
+    <p class="name">名前</p>
+    <%=form_tag("/posts/create") do %>
+      <textarea name="name"></textarea>
+      <p>出勤or退勤</p>
+      <textarea name="stamping"></textarea>
+      <input type="submit" value="送信">
+    <%end%>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%=link_to("データ","/posts/index")%>
+    <br>
+    <br>
+    <%=link_to("今月の勤務時間","/posts/times")%>
+    
+
+  </body>
+</html>

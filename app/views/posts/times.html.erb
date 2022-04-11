@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>出退勤管理</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <p>誰の勤務時間を見ますか？</p>
+    <textarea name="who"></textarea>
+    <p>何月の勤務時間を見ますか？</p>
+    <textarea name="month"></textarea>
+    
+    <% @posts.each do |post| %>
+
+        <div>
+            <%=post.context %> <%=post.created_at.to_date%><%=post.created_at[post.id+1]-post.created_at%>
+        </div>
+    <%end%>
+  </body>
